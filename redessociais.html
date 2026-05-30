@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="angel1.jpg">
+
+  <title>Redes Sociais ✨</title>
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+ 
+  <button class="theme-toggle" id="themeToggle">
+    🌙
+  </button>
+
+
+  <div class="glow-follow"></div>
+
+ 
+  <div class="mushroom m1">🍄</div>
+  <div class="mushroom m2">✨</div>
+  <div class="mushroom m3">🌙</div>
+
+
+  <section class="social-section">
+
+    <div class="social-card">
+
+      <h1>Minhas Redes Sociais ✨</h1>
+
+      <p class="intro">
+        Clique nos pequenos ícones ao lado do texto para ser enviado
+        para a minha rede social/portfólio.
+      </p>
+
+      <p class="intro">
+        Recomendo me seguir em todas, mas especificamente no meu
+        canal do WhatsApp 🌙✨
+      </p>
+
+      <div class="social-item">
+
+        <a href="https://cara.app/charmsangels" target="_blank" class="social-icon cara">
+          <i class="fa-solid fa-palette"></i>
+        </a>
+
+        <div class="social-text">
+          <h2>Cara App</h2>
+
+          <p>
+            Meu portfólio com projetos, ilustrações e comissões.
+            Lá tudo fica mais organizado para explorar meus trabalhos
+            de forma mais específica 🍄
+          </p>
+        </div>
+
+      </div>
+
+      <div class="social-item">
+
+        <a href="https://www.instagram.com/charms_angells?igsh=MTlwbzhpbzNkemEwMQ==
+" target="_blank" class="social-icon insta">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <div class="social-text">
+          <h2>Instagram</h2>
+
+          <p>
+            Uma das principais redes para acompanhar meus desenhos,
+            reels animados, artesanato, bijuterias e conteúdos artísticos ✨
+          </p>
+        </div>
+
+      </div>
+      <div class="social-item">
+
+        <a href="https://bsky.app/profile/charmsangels.bsky.social" target="_blank" class="social-icon sky">
+          <i class="fa-solid fa-cloud"></i>
+        </a>
+
+        <div class="social-text">
+          <h2>Bluesky</h2>
+
+          <p>
+            Rede onde estou mais ativa interagindo, comentando assuntos
+            favoritos e postando desenhos exclusivos 🌙
+          </p>
+        </div>
+
+      </div>
+      <div class="social-item">
+
+        <a href="https://youtube.com/@charms_angels?si=FO3pb_eESqS68z-d" target="_blank" class="social-icon yt">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <div class="social-text">
+          <h2>Youtube</h2>
+
+          <p>
+            Vídeos longos sobre arte, rotina, hobbies e futuramente
+            gameplays inspiradas nos meus youtubers favoritos 🎮
+          </p>
+        </div>
+
+      </div>
+
+      <div class="social-item">
+
+        <a href="https://www.tumblr.com/charmsangels?source=share" target="_blank" class="social-icon tumblr">
+          <i class="fab fa-tumblr"></i>
+        </a>
+
+        <div class="social-text">
+          <h2>Tumblr</h2>
+
+          <p>
+            Lugar onde posto ilustrações digitais e conteúdos
+            relacionados aos meus fandoms favoritos ✨
+          </p>
+        </div>
+
+      </div>
+      <div class="social-item">
+
+        <a href="https://www.tiktok.com/@charms_angels?is_from_webapp=1&sender_device=pc" target="_blank" class="social-icon tiktok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+
+        <div class="social-text">
+          <h2>Tiktok</h2>
+
+          <p>
+            Vídeos variados sobre arte, humor, rotina e conteúdos
+            mais livres e espontâneos 🍄
+          </p>
+        </div>
+
+      </div>
+
+      <div class="social-item">
+
+        <a href="https://whatsapp.com/channel/0029Vb7cwut8fewswRF84C2z " target="_blank" class="social-icon whats">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <div class="social-text">
+          <h2>Canal do WhatsApp</h2>
+
+          <p>
+            O melhor lugar para acompanhar todas as novidades
+            das minhas redes ao mesmo tempo 🌙
+          </p>
+        </div>
+
+      </div>
+
+      <div class="qr-section">
+
+        <h2>Meu Strawpage ✨</h2>
+
+        <p>
+          No QRCode abaixo você pode acessar meu Strawpage,
+          um site totalmente feito por mim com dinâmicas interativas
+          e conteúdos especiais :>
+        </p>
+
+        <div class="qr-box">
+          <img src="qrcpde.png" alt="QR Code">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+
+    const glow = document.querySelector(".glow-follow");
+
+    document.addEventListener("mousemove", (e) => {
+      glow.style.left = e.clientX + "px";
+      glow.style.top = e.clientY + "px";
+    });
+
+    // tema
+    const toggleBtn =
+      document.getElementById("themeToggle");
+
+    toggleBtn.addEventListener("click", () => {
+
+      document.body.classList.toggle("light-mode");
+
+      if(document.body.classList.contains("light-mode")) {
+        toggleBtn.innerHTML = "☀️";
+      } else {
+        toggleBtn.innerHTML = "🌙";
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

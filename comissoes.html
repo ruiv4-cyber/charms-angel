@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="angel1.jpg">
+  <title>Comissões & Produtos ✨</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  
+  <button class="theme-toggle" id="themeToggle">
+    🌙
+  </button>
+
+
+  <div class="glow-follow"></div>
+
+  <div class="mushroom m1">🍄</div>
+  <div class="mushroom m2">✨</div>
+  <div class="mushroom m3">🌙</div>
+
+
+<div class="floating-cart">
+
+  <button class="cart-icon-btn">
+
+    🛒
+
+    <span id="cart-count">
+      0
+    </span>
+
+  </button>
+
+</div>
+  <section class="shop-section">
+
+    <div class="shop-header">
+
+      <h1>Comissões & Produtos ✨</h1>
+
+      <p>
+        Escolha um universo mágico para explorar 🍄
+      </p>
+
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+
+        <img src="digital.jpg" alt="Desenho Digital">
+
+        <h2>Desenho Digital</h2>
+
+        <p>
+          Ilustrações digitais personalizadas.
+        </p>
+
+        <div class="product-buttons">
+
+          <a href="desenho-digital.html"
+          class="btn-magic small">
+            Ver Mais
+          </a>
+
+          <button
+          class="btn-cart"
+          data-name="Desenho Digital"
+          data-price="80">
+
+            🛒 Adicionar
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-card">
+
+        <img src="papelao.jpg" alt="Papelao">
+
+        <h2>Papelão</h2>
+
+        <p>
+          Artesanato e esculturas criativas.
+        </p>
+
+        <div class="product-buttons">
+
+          <a href="papelao.html"
+          class="btn-magic small">
+            Ver Mais
+          </a>
+
+          <button
+          class="btn-cart"
+          data-name="Papelao"
+          data-price="55">
+
+            🛒 Adicionar
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-card">
+
+        <img src="pintura.jpg" alt="Pintura">
+
+        <h2>Pintura & Desenho</h2>
+
+        <p>
+          Quadros, artes tradicionais e pinturas.
+        </p>
+
+        <div class="product-buttons">
+
+          <a href="pintura.html"
+          class="btn-magic small">
+            Ver Mais
+          </a>
+
+          <button
+          class="btn-cart"
+          data-name="Pintura & Desenho"
+          data-price="120">
+
+            🛒 Adicionar
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-card">
+
+        <img src="broches.jpg" alt="Broches">
+
+        <h2>Broches</h2>
+
+        <p>
+          Broches artesanais e colecionáveis.
+        </p>
+
+        <div class="product-buttons">
+
+          <a href="broches.html"
+          class="btn-magic small">
+            Ver Mais
+          </a>
+
+          <button
+          class="btn-cart"
+          data-name="Broches"
+          data-price="25">
+
+            🛒 Adicionar
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-card">
+
+        <img src="marca.jpg" alt="Marca Página">
+
+        <h2>Marca Página</h2>
+
+        <p>
+          Marcadores mágicos personalizados.
+        </p>
+
+        <div class="product-buttons">
+
+          <a href="marcapagina.html"
+          class="btn-magic small">
+            Ver Mais
+          </a>
+
+          <button
+          class="btn-cart"
+          data-name="Marca Página"
+          data-price="15">
+
+            🛒 Adicionar
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="product-card">
+
+        <img src="personalizados.jpg"
+        alt="Personalizados">
+
+        <h2>Personalizados</h2>
+
+        <p>
+          Produtos únicos feitos sob encomenda.
+        </p>
+
+        <div class="product-buttons">
+
+          <a href="personalizados.html"
+          class="btn-magic small">
+            Ver Mais
+          </a>
+
+          <button
+          class="btn-cart"
+          data-name="Personalizados"
+          data-price="95">
+
+            🛒 Adicionar
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+
+    const glow = document.querySelector(".glow-follow");
+
+    document.addEventListener("mousemove", (e) => {
+      glow.style.left = e.clientX + "px";
+      glow.style.top = e.clientY + "px";
+    });
+
+    // tema
+    const toggleBtn =
+      document.getElementById("themeToggle");
+
+    toggleBtn.addEventListener("click", () => {
+
+      document.body.classList.toggle("light-mode");
+
+      if(document.body.classList.contains("light-mode")) {
+        toggleBtn.innerHTML = "☀️";
+      } else {
+        toggleBtn.innerHTML = "🌙";
+      }
+
+    });
+
+
+
+const cartCount =
+  document.getElementById("cart-count");
+
+const buttons =
+  document.querySelectorAll(".btn-cart");
+
+let count = 0;
+
+buttons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    count++;
+
+    cartCount.textContent = count;
+
+    cartCount.animate([
+
+      {
+        transform: "scale(1)"
+      },
+
+      {
+        transform: "scale(1.4)"
+      },
+
+      {
+        transform: "scale(1)"
+      }
+
+    ], {
+
+      duration: 300
+
+    });
+
+  });
+
+});
+
+
+</script>
+
+
+</body>
+</html>

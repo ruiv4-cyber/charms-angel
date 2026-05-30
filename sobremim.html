@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="angel1.jpg">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Sobre Mim ✨</title>
+</head>
+
+<body class="about-body">
+
+ <button class="theme-toggle" id="themeToggle">
+  🌙
+</button> 
+  <div class="glow-follow"></div>
+
+
+  <div class="mushroom m1">🍄</div>
+  <div class="mushroom m2">✨</div>
+  <div class="mushroom m3">🌙</div>
+
+ 
+  <section class="about-section">
+
+    <div class="about-card">
+
+      <div class="mushroom-frame">
+
+        <div class="mush deco1">🍄</div>
+        <div class="mush deco2">🍄</div>
+        <div class="mush deco3">✨</div>
+        <div class="mush deco4">🌙</div>
+
+        <img src="angel2.jfif" alt="Minha foto">
+
+      </div>
+
+      <!-- texto -->
+      <div class="about-content">
+
+        <h1>Sobre Mim</h1>
+
+        <p>
+          Bem-vindo ao meu pequeno universo mágico 🌙✨
+        </p>
+
+        <p>
+          
+Olá! Meu nome é Angel, meus pronomes: Ela/dele.
+Atualmente tenho 19 anos, sou uma multi artista de Recife, — mas sou "naturalizada" Jaboatãonense"— Pernambuco.
+Quando eu digo que sou >Multi artista< eu digo com propriedade, pois a arte pra mim chegou de diversas formas, e gosto de me expressar {dê uma passadinha no meu portifólio} com todas elas, a cada uma que aprendo, é mais uma para fazer parte de mim...
+
+Eu amo arte digital, na maior parte das vezes é ela que mais prático, comecei a produzir arte digital, usando o aplicativo "Ibis Paint", e fiquei nele por alguns anos mas atualmente utilizo o programa "Krita" e ainda estou em processo de aprender tudo sobre.
+
+Nas artes tradicionais (pintura e desenho) é algo que por mais que eu tenha muitos anos praticando, somente a alguns anos atrás eu comecei a estudar, teoria das cores, formas de pintura e etc. Acho que é a forma mais desafiadora pra mim porque é a que exige mais paciência para fazer os principais passos, e todo o processo seguinte.
+ 
+Comecei a fazer diversas formas de artesanato, como: cerâmica, croché, papel mache, colagem, bijuterias e criar coisas usando papelão. Atualmente estou fazendo teatro na Universidade Federal de Pernambuco (UFPE) e participando da oficina de artes visuais da Escola Municipal de Artes João Pernambuco.
+
+        </p>
+
+        <p>
+          Aqui você encontra um cantinho cheio
+          de brilho, criatividade, sonhos e boas vibrações 🍄
+        </p>
+
+        <div class="about-buttons">
+
+          <a href="#" class="btn-magic">
+            ✨ Comissões e produtos
+          </a>
+          <a href="redessociais.html" class="btn-magic">
+            ✨ Redes sociais
+          </a>
+
+          <a href="index.html" class="btn-magic secondary">
+            🌙 Voltar
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    const glow = document.querySelector(".glow-follow");
+
+    document.addEventListener("mousemove", (e) => {
+      glow.style.left = e.clientX + "px";
+      glow.style.top = e.clientY + "px";
+    });
+  </script>
+  <script>
+
+  const toggleBtn = document.getElementById("themeToggle");
+
+  toggleBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")) {
+      toggleBtn.innerHTML = "☀️";
+    } else {
+      toggleBtn.innerHTML = "🌙";
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
